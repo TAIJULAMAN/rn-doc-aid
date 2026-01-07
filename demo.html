@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doc Aid - Doctor Appointment App Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #2E86DE 0%, #1E5A9E 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2E86DE 0%, #1E5A9E 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #2E86DE;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            color: #7F8C8D;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .feature-card {
+            background: #F8F9FA;
+            border-radius: 16px;
+            padding: 30px;
+            border: 2px solid #E1E8ED;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(46, 134, 222, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            color: #2C3E50;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: #7F8C8D;
+            font-size: 16px;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .tech-badge {
+            background: #2E86DE;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .cta {
+            background: linear-gradient(135deg, #2E86DE 0%, #1E5A9E 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            border-radius: 16px;
+            margin-top: 40px;
+        }
+
+        .cta h2 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            color: white;
+            opacity: 0.9;
+            margin-bottom: 25px;
+        }
+
+        .cta code {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px 25px;
+            border-radius: 8px;
+            display: inline-block;
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+        }
+
+        .screenshot-placeholder {
+            background: #F8F9FA;
+            border: 2px dashed #E1E8ED;
+            border-radius: 16px;
+            padding: 60px;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .screenshot-placeholder p {
+            color: #95A5A6;
+            font-size: 18px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 36px;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏥 Doc Aid</h1>
+            <p>Doctor Appointment & Telehealth App</p>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2>📱 About the App</h2>
+                <p>
+                    <strong>Doc Aid</strong> is a complete React Native Expo application built with TypeScript, 
+                    featuring a clean medical aesthetic and intuitive booking flow for doctor appointments 
+                    and telehealth consultations.
+                </p>
+                <p>
+                    The app includes animated onboarding, doctor discovery, real-time availability checking, 
+                    and a sophisticated time slot booking system with automatic past slot disabling.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>✨ Key Features</h2>
+                <div class="features">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Onboarding Flow</h3>
+                        <p>Beautiful animated slides introducing key features with smooth transitions and pagination dots.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🏠</div>
+                        <h3>Home Dashboard</h3>
+                        <p>Search bar, specialty categories, and top doctors listing with ratings and availability.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">📅</div>
+                        <h3>Smart Booking</h3>
+                        <p>Calendar strip, time slot grid (Morning/Afternoon/Evening), and automatic past slot disabling.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">👨‍⚕️</div>
+                        <h3>Doctor Profiles</h3>
+                        <p>Comprehensive profiles with stats, reviews, experience, and patient testimonials.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">💳</div>
+                        <h3>Payment Options</h3>
+                        <p>Choose between Pay at Clinic or Pay Online with clear fee display.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🎨</div>
+                        <h3>Medical Clean Design</h3>
+                        <p>Blue theme, rounded corners, soft shadows, and smooth animations throughout.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🛠️ Tech Stack</h2>
+                <div class="tech-stack">
+                    <span class="tech-badge">React Native</span>
+                    <span class="tech-badge">Expo SDK 54</span>
+                    <span class="tech-badge">TypeScript</span>
+                    <span class="tech-badge">React Navigation</span>
+                    <span class="tech-badge">React Native Reanimated</span>
+                    <span class="tech-badge">date-fns</span>
+                    <span class="tech-badge">Expo Linear Gradient</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>📊 Mock Data</h2>
+                <p>The app includes 5 mock doctors across different specialties:</p>
+                <ul style="margin-left: 20px; color: #7F8C8D; line-height: 2;">
+                    <li>🫀 Dr. Sarah Johnson - Cardiologist (12 years, 4.8★)</li>
+                    <li>🦷 Dr. Michael Chen - Dentist (8 years, 4.9★)</li>
+                    <li>🧴 Dr. Priya Sharma - Dermatologist (10 years, 4.7★)</li>
+                    <li>👶 Dr. James Williams - Pediatrician (15 years, 4.9★)</li>
+                    <li>🧠 Dr. Amanda Rodriguez - Neurologist (11 years, 4.8★)</li>
+                </ul>
+            </div>
+
+            <div class="screenshot-placeholder">
+                <p>📱 Run the app on iOS/Android to see the full experience!</p>
+            </div>
+
+            <div class="cta">
+                <h2>🚀 Run the App</h2>
+                <p>To run the Doc Aid app on your device or simulator:</p>
+                <code>cd c:\Projects\rn-doctor-appointment-app && npx expo start</code>
+                <p style="margin-top: 20px; font-size: 14px;">
+                    Then press 'i' for iOS simulator or 'a' for Android emulator
+                </p>
+            </div>
+
+            <div class="section" style="margin-top: 40px;">
+                <h2>📁 Project Structure</h2>
+                <p>The codebase follows a feature-based architecture:</p>
+                <ul style="margin-left: 20px; color: #7F8C8D; line-height: 2;">
+                    <li><strong>src/components/</strong> - Shared UI components (Button, Card, DoctorCard)</li>
+                    <li><strong>src/features/</strong> - Feature modules (auth, home, doctors, booking)</li>
+                    <li><strong>src/navigation/</strong> - App navigation setup</li>
+                    <li><strong>src/types/</strong> - TypeScript interfaces</li>
+                    <li><strong>src/theme/</strong> - Design system (colors, typography, shadows)</li>
+                    <li><strong>src/utils/</strong> - Helper functions (time slot generation, availability checking)</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2>🎯 Core Booking Logic</h2>
+                <p>The app implements sophisticated time slot management:</p>
+                <ul style="margin-left: 20px; color: #7F8C8D; line-height: 2;">
+                    <li><strong>generateTimeSlots()</strong> - Creates slots from doctor availability</li>
+                    <li><strong>categorizeTimeSlots()</strong> - Groups by Morning/Afternoon/Evening</li>
+                    <li><strong>Automatic disabling</strong> - Past slots are disabled if date is today</li>
+                    <li><strong>Real-time checking</strong> - Availability updates based on current time</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
